@@ -1,8 +1,10 @@
 // script.js
-
-function greetUser(name) {
-    alert("Hello, " + name + "!");
-}
-
-// Example usage:
-greetUser("Student");
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            console.log("Clicked on: " + link.textContent);
+        });
+    });
+});
